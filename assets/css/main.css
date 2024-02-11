@@ -1,11 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -2600,9 +2595,9 @@ input, select, textarea {
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
-		padding: 8em 4em;
+		padding: 8em 2em;
 		position: fixed;
-		text-align: right;
+		text-align: center;
 		top: 0;
 		width: 35%;
 	}
@@ -2634,6 +2629,13 @@ input, select, textarea {
 		#header h1 {
 			color: rgba(255, 255, 255, 0.5);
 			font-size: 1.35em;
+			line-height: 1.75em;
+			margin: 0;
+		}
+
+		#header h3 {
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 1.1em;
 			line-height: 1.75em;
 			margin: 0;
 		}
