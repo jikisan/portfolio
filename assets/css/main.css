@@ -396,6 +396,7 @@ pre code {
 
 .row {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	align-items: stretch;
@@ -3350,7 +3351,7 @@ body.is-touch .poptrox-popup .closer {
 .chip-group {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 8px;
+	gap: 20px;
 	padding: 8px;
   }
 
@@ -3367,7 +3368,7 @@ body.is-touch .poptrox-popup .closer {
 	font-size: 18px;
 	font-weight: bold;
 	transition: background-color 0.3s, color 0.3s;
-	width: 200px; /* Set the width for all chips */
+	min-width: 150px; 
 
   }
 
@@ -3385,10 +3386,11 @@ body.is-touch .poptrox-popup .closer {
   }
 
   .chip.java { background: linear-gradient(to right, #f89820, #ffcc00); color: #000;}
-  .chip.kotlin { background: linear-gradient(to right, #984a99, #b97be2); color: #000; }
+  .chip.kotlin { background: linear-gradient(to right, #984a99, #aa154f); color: #000; }
   .chip.python { background: linear-gradient(to right, #306998, #458ad4); color: #000; }
   .chip.html { background: linear-gradient(to right, #e34c26, #d69d85); color: #000; }
-  .chip.css { background: linear-gradient(to right, #6f86e0, #245ee4); color: #000; }
+  .chip.css { background: linear-gradient(to right, #5b7cff, #0852ff); color: #000; }
   .chip.javascript { background: linear-gradient(to right, #e9e1af, #f1e44f); color: #000;}
   .chip.android { background: linear-gradient(to right, #a7c055, #9bb976); color: #000;}
   .chip.git { background: linear-gradient(to right, #e0d6d5, #817473); color: #000; }
+  .chip.jira { background: linear-gradient(to right, #95a3dd, #1455eb); color: #000; }
