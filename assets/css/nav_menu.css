@@ -22,6 +22,7 @@ html {
 
 nav {
     /* background-color: white; */
+    z-index: 999;
     width: calc(100% - 30%);
     float: inline-start;
     position: fixed;

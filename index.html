@@ -7,10 +7,11 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-	<link rel="stylesheet" href="./assets//css/nav_menu.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-		integrity="sha384-r0eR7usJrDd2TsmfDkZczvzvBEgDbIXLjOHFFffC9Bo7mJUgXGRRg5ZVixXNq2cU" crossorigin="anonymous">
-
+	integrity="sha384-r0eR7usJrDd2TsmfDkZczvzvBEgDbIXLjOHFFffC9Bo7mJUgXGRRg5ZVixXNq2cU" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="./assets//css/nav_menu.css">
+	<link rel="stylesheet" href="./assets//css/experiences_section.css">
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
@@ -34,7 +35,7 @@
 
 			<nav id="menu-nav">
 				<a href="#about">About me</a>
-				<a href="#mySkills">Skills</a>
+				<a href="#skills">Skills</a>
 				<a href="#projects">projects</a>
 				<a href="#experience">Experiences</a>
 				<a href="#certificates">Certificates</a>
@@ -44,9 +45,9 @@
 
 	<div id="main">
 
-		<section id="about">	
+		<section>
 			<header class="major">
-				<h2>About Me</h2>
+				<h2 id="about">About Me</h2>
 			</header>
 
 			<p>I am a dedicated Software developer with hands-on experience crafting intuitive and robust applications
@@ -54,11 +55,11 @@
 				With a passion for innovation and a keen eye for detail, I thrive on transforming ideas into impactful
 				digital solutions.
 				<br><br>
-				My journey in Android development has equipped me with a deep understanding of mobile technologies,
+				My journey in Software development has equipped me with a deep understanding of software technologies,
 				allowing me to
 				stay at the forefront of industry trends and deliver exceptional user experiences. Committed to
 				continuous learning and growth,
-				I am eager to take on new challenges and contribute to projects that push the boundaries of mobile
+				I am eager to take on new challenges and contribute to projects that push the boundaries of software
 				development.
 			</p>
 
@@ -69,27 +70,28 @@
 						</ul> -->
 		</section>
 
-		<section id="skills">
+		<section>
 			<header class="major">
-				<h2 id="mySkills">Skills</h2>
+				<h2 id="skills">Skills</h2>
 			</header>
 
 			<div class="chip-group" id="chipGroup">
 				<span class="chip java"><i class="fab fa-java"></i>Java</span>
 				<span class="chip kotlin"><i class="fas fa-file-code"></i>Kotlin</span>
+				<span class="chip javascript"><i class="fab fa-js"></i>JavaScript</span>
 				<span class="chip html"><i class="fab fa-html5"></i>HTML</span>
 				<span class="chip css"><i class="fab fa-css3-alt"></i>CSS</span>
-				<span class="chip javascript"><i class="fab fa-js"></i>JavaScript</span>
 				<span class="chip android"><i class="fab fa-android"></i>Android Studio</span>
 				<span class="chip git"><i class="fab fa-github"></i>Github</span>
 				<span class="chip jira"><i class="fab fa-jira"></i>Jira</span>
+				<span class="chip firebase"><i class="fa-solid fa-fire-flame-curved"></i></i>Firebase</span>
 			</div>
 
 		</section>
 
-		<section id="projects">
+		<section>
 			<header class="major">
-				<h2>Projects</h2>
+				<h2 id="projects">Projects</h2>
 			</header>
 			<div class="row">
 
@@ -203,16 +205,57 @@
 
 		</section>
 
-		<section id="experience">
+		<section>
 			<header class="major">
-				<h2>Experiences</h2>
+				<h2 id="experience">Experiences</h2>
 			</header>
+
+			<ul id="experience-list">
+				<li class="exp-items" style="--accent-color:#41516C">
+					<div class="date">May 2023 - Present</div>
+					<div class="title"><strong>Android Developer</strong>
+						<br> @ Timex Group
+					</div>
+					<div class="descr">
+						<ul>
+							<li>Develop Android applications and tools</li>
+							<li>Develop test script automations</li>
+							<li>Develop JS libraries</li>
+							<li>Test software applications</li>
+						</ul>
+					</div>
+				</li>
+				<li class="exp-items" style="--accent-color:#FBCA3E">
+					<div class="date">May 2022 - Present</div>
+					<div class="title"><strong>Freelance Software Developer</strong></div>
+					<div class="descr">
+						<ul>
+							<li>Develop applications based on the needs of clients</li>
+							<li>Develop applications from scratch</li>
+							<li>Provide insights to clients based on their needs</li>
+						</ul>
+					</div>
+				</li>
+				<li class="exp-items" style="--accent-color:#E24A68">
+					<div class="date">Jul 2022 - May 2023</div>
+					<div class="title"><strong>Data Analyst</strong>
+						<br> @ OfficePartners360
+					</div>
+					<div class="descr">
+						<ul>
+							<li>Analyze and interpret data</li>
+							<li>Collate and organize data for analysis</li>
+							<li>Provide insights to clients based on their needs</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
 
 		</section>
 
-		<section id="certificates">
+		<section>
 			<header class="major">
-				<h2>Certificates</h2>
+				<h2 id="certificates">Certificates</h2>
 			</header>
 
 			<h4>ISTQB Certified Tester</h4>
@@ -224,7 +267,7 @@
 					target="_blank">24-CTFL-243467-12</a>
 				<p>Skills: <strong>Software Testing, Static Testing, Software Testing Life Cycle (STLC),
 						Test Management Approach (TMAP), Testing Tools
-				</strong></p>
+					</strong></p>
 			</ul>
 
 			<h4>STATE OF THE ART ANDROID APP DEVELOPMENT IN KOTLIN</h4>
@@ -300,22 +343,22 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-        document.querySelectorAll('#menu-nav > a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                const offset = 50; // Adjust the offset value as needed
-                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition - offset;
+		document.querySelectorAll('#menu-nav > a').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				const targetId = this.getAttribute('href').substring(1);
+				const targetElement = document.getElementById(targetId);
+				const offset = 50; // Adjust the offset value as needed
+				const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+				const offsetPosition = elementPosition - offset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+				window.scrollTo({
+					top: offsetPosition,
+					behavior: 'smooth'
+				});
+			});
+		});
+	</script>
 
 </body>
 
