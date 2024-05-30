@@ -8,11 +8,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-	integrity="sha384-r0eR7usJrDd2TsmfDkZczvzvBEgDbIXLjOHFFffC9Bo7mJUgXGRRg5ZVixXNq2cU" crossorigin="anonymous">
-	
+		integrity="sha384-r0eR7usJrDd2TsmfDkZczvzvBEgDbIXLjOHFFffC9Bo7mJUgXGRRg5ZVixXNq2cU" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="./assets//css/nav_menu.css">
 	<link rel="stylesheet" href="./assets//css/experiences_section.css">
 	<link rel="stylesheet" href="assets/css/main.css" />
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
 </head>
 
 <body class="is-preload">
@@ -34,11 +37,18 @@
 			</ul>
 
 			<nav id="menu-nav">
-				<a href="#about">About me</a>
-				<a href="#skills">Skills</a>
-				<a href="#projects">projects</a>
-				<a href="#experience">Experiences</a>
-				<a href="#certificates">Certificates</a>
+				<div class="menu-toggle" id="menu-toggle">
+					<div class="burger"></div>
+					<div class="burger"></div>
+					<div class="burger"></div>
+				</div>
+				<div class="menu-links" id="menu-links">
+					<a href="#about">About me</a>
+					<a href="#skills">Skills</a>
+					<a href="#projects">Projects</a>
+					<a href="#experience">Experiences</a>
+					<a href="#certificates">Certificates</a>
+				</div>
 			</nav>
 		</div>
 	</header>
@@ -94,10 +104,11 @@
 				<h2 id="projects">Projects</h2>
 			</header>
 			<div class="row">
-
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/mockups/vstech_mockup.png" class="image fit thumb"><img
-							src="images/mockups/vstech_mockup.png" alt="" /></a>
+					<a href="images/mockups/vstech_mockup.png" class="image fit thumb" data-lightbox="work-item"
+						data-title="VSTECH - AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION">
+						<img src="images/mockups/vstech_mockup.png" alt="VSTECH Mockup" />
+					</a>
 					<h3>VSTECH</h3>
 					<p>AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION.</p>
 					<br>
@@ -112,8 +123,10 @@
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/mockups/phhereoes.png" class="image fit thumb"><img
-							src="images/mockups/phhereoes.png" alt="" /></a>
+					<a href="images/mockups/phhereoes.png" class="image fit thumb" data-lightbox="work-item"
+						data-title="PH Heroes - A MOBILE APP HONORING THE HEROES OF THE PHILIPPINES">
+						<img src="images/mockups/phhereoes.png" alt="PH Heroes" />
+					</a>
 					<h3>PH Heroes</h3>
 					<p>A MOBILE APP HONORING THE HEROES OF THE PHILIPPINES, PROVIDING DETAILED PROFILES AND INSIGHTS
 						INTO THEIR REMARKABLE LIVES.</p>
@@ -127,15 +140,17 @@
 						<li>MVVM</li>
 						<li>Utilize ROOM as local database</li>
 						<li>Fetch API using retrofit</li>
-						<li>Pallete API</li>
+						<li>Palette API</li>
 						<li>Develop a backend server with KTOR</li>
 						<li>Dependency injection with Koin</li>
 					</ul>
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/mockups/busyan.png" class="image fit thumb"><img src="images/mockups/busyan.png"
-							alt="" /></a>
+					<a href="images/mockups/busyan.png" class="image fit thumb" data-lightbox="work-item"
+						data-title="BusYan - A MOBILE APPLICATION TAILORED FOR COMMUTERS">
+						<img src="images/mockups/busyan.png" alt="BusYan" />
+					</a>
 					<h3>BusYan</h3>
 					<p>A MOBILE APPLICATION TAILORED FOR COMMUTERS, FACILITATING SEAT RESERVATIONS ON NEARBY JEEPNEYS
 						FOR ENHANCED COMMUTING CONVENIENCE.</p>
@@ -152,11 +167,13 @@
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/mockups/f2l2.png" class="image fit thumb"><img src="images/mockups/f2l2.png"
-							alt="" /></a>
+					<a href="images/mockups/f2l2.png" class="image fit thumb" data-lightbox="work-item"
+						data-title="Fish2Locals - A MOBILE E-COMMERCE APPLICATION">
+						<img src="images/mockups/f2l2.png" alt="Fish2Locals" />
+					</a>
 					<h3>Fish2Locals</h3>
-					<p>A MOBILE E-COMMERCE APPLICATION TO FACILITATE BETWEEN FISH BUYERS AND SELLERS..</p>
-					</br>
+					<p>A MOBILE E-COMMERCE APPLICATION TO FACILITATE BETWEEN FISH BUYERS AND SELLERS.</p>
+					<br>
 					<h3>Tech used:</h3>
 					<ul>
 						<li>Java</li>
@@ -168,12 +185,14 @@
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/mockups/servicehub3.png" class="image fit thumb"><img
-							src="images/mockups/servicehub3.png" alt="" /></a>
+					<a href="images/mockups/servicehub3.png" class="image fit thumb" data-lightbox="work-item"
+						data-title="ServiceHub - A MOBILE E-COMMERCE APPLICATION FOR HVAC SERVICES">
+						<img src="images/mockups/servicehub3.png" alt="ServiceHub" />
+					</a>
 					<h3>ServiceHub</h3>
 					<p>A MOBILE E-COMMERCE APPLICATION DESIGNED FOR THE HVAC INDUSTRY TO FACILITATE THE EASY BOOKING OF
 						SERVICES.</p>
-					</br>
+					<br>
 					<h3>Tech used:</h3>
 					<ul>
 						<li>Java</li>
@@ -184,11 +203,13 @@
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/mockups/revic.png" class="image fit thumb"><img src="images/mockups/revic.png"
-							alt="" /></a>
+					<a href="images/mockups/revic.png" class="image fit thumb" data-lightbox="work-item"
+						data-title="Revic - A PROFESSIONAL NETWORKING PLATFORM FOR DJ'S AND MUSICIANS">
+						<img src="images/mockups/revic.png" alt="Revic" />
+					</a>
 					<h3>Revic</h3>
 					<p>A PROFESSIONAL NETWORKING MOBILE PLATFORM FOR DJ'S AND MUSICIANS.</p>
-					</br>
+					<br>
 					<h3>Tech used:</h3>
 					<ul>
 						<li>Java</li>
@@ -199,8 +220,10 @@
 				</article>
 
 				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/mockups/jaja.png" class="image fit thumb"><img src="images/mockups/jaja.png"
-							alt="" /></a>
+					<a href="images/mockups/jaja.png" class="image fit thumb" data-lightbox="work-item"
+						data-title="JAJA - A SOCIAL MEDIA PLATFORM FOR AUDIO ENTHUSIASTS">
+						<img src="images/mockups/jaja.png" alt="JAJA" />
+					</a>
 					<h3>JAJA</h3>
 					<p>A SOCIAL MEDIA MOBILE PLATFORM FOR AUDIO ENTHUSIASTS.</p>
 					<br>
@@ -211,10 +234,6 @@
 						<li>RecordView API</li>
 					</ul>
 				</article>
-
-
-
-
 			</div>
 
 			<a href="https://github.com/jikisan" class="button" target="_blank">CHECK MY OTHER PROJECTS</a>
@@ -358,13 +377,15 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 	<script>
-		document.querySelectorAll('#menu-nav > a').forEach(anchor => {
+		document.querySelectorAll('#menu-links > a').forEach(anchor => {
 			anchor.addEventListener('click', function (e) {
 				e.preventDefault();
 				const targetId = this.getAttribute('href').substring(1);
 				const targetElement = document.getElementById(targetId);
-				const offset = 50; // Adjust the offset value as needed
+				const offset = 100; // Adjust the offset value as needed
 				const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
 				const offsetPosition = elementPosition - offset;
 
@@ -374,6 +395,16 @@
 				});
 			});
 		});
+
+		document.addEventListener('DOMContentLoaded', function () {
+			const menuToggle = document.getElementById('menu-toggle');
+			const menuLinks = document.getElementById('menu-links');
+
+			menuToggle.addEventListener('click', function () {
+				menuLinks.classList.toggle('active');
+			});
+		});
+
 	</script>
 
 </body>

@@ -8,17 +8,72 @@
     bottom: 15px;
 } */
 
+/* Base styles for the navigation menu */
 #menu-nav {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding: 1em;
+    color: #333;
+    z-index: 1000;
 }
+
+#menu-nav .menu-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+/* Hide the burger icon by default */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+    #menu-nav .menu-links {
+        margin-left: 10px;
+        opacity: 80%;
+        background-color: whitesmoke;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu-nav .menu-links a {
+        margin: 1em 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Show the menu links when the burger menu is active */
+.menu-links.active {
+    display: flex !important;
+}
+
 
 html {
     scroll-behavior: smooth;
 }
 
 .offset {
-    padding-top: 100px; /* Adjust the offset value as needed */
-    margin-top: -100px; /* Same value as padding-top */
+    padding-top: 80px; /* Adjust the offset value as needed */
+    margin-top: -80px; /* Same value as padding-top */
 }
+
 
 nav {
     /* background-color: white; */
