@@ -7,8 +7,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-		integrity="sha384-r0eR7usJrDd2TsmfDkZczvzvBEgDbIXLjOHFFffC9Bo7mJUgXGRRg5ZVixXNq2cU" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 	<link rel="stylesheet" href="./assets//css/nav_menu.css">
 	<link rel="stylesheet" href="./assets//css/experiences_section.css">
@@ -388,6 +387,12 @@
 				const offset = 100; // Adjust the offset value as needed
 				const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
 				const offsetPosition = elementPosition - offset;
+
+				const menuLinks = document.getElementById('menu-links');
+
+				if (menuLinks.getAttribute('class') === 'menu-links active') {
+					menuLinks.classList.remove('active');
+				}
 
 				window.scrollTo({
 					top: offsetPosition,

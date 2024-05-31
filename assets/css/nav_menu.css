@@ -18,11 +18,19 @@
     z-index: 1000;
 }
 
+#menu-nav .menu-links {
+    z-index: 1000;
+}
+
 #menu-nav .menu-links a {
     color: #333;
     text-decoration: none;
     margin: 0 1em;
+    z-index: 1000;
+
 }
+
+
 
 /* Hide the burger icon by default */
 .menu-toggle {
@@ -48,10 +56,13 @@
         flex-direction: column;
         width: 100%;
         text-align: center;
+
     }
 
     #menu-nav .menu-links a {
         margin: 1em 0;
+        z-index: 1000;
+
     }
 
     .menu-toggle {
