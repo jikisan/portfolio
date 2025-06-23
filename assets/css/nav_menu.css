@@ -16,6 +16,7 @@
     padding: 1em;
     color: #333;
     z-index: 1000;
+    width: 100%;
 }
 
 #menu-nav .menu-links {
@@ -87,13 +88,14 @@ html {
 
 
 nav {
-    /* background-color: white; */
+    background-color: rgba(255, 255, 255, 0.748);
     z-index: 999;
     width: calc(100% - 30%);
     float: inline-start;
     position: fixed;
-    top: 30px;
-    text-align: left;
+    top: 0px;
+    left: 0px;
+    text-align: center;
 }
 
 nav a {
