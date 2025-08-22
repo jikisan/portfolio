@@ -3390,16 +3390,28 @@ body.is-touch .poptrox-popup .closer {
 	margin-right: 10px
   }
 
-  .chip.java { background: linear-gradient(to right, #f89820, #ffcc00); color: #000;}
-  .chip.kotlin { background: linear-gradient(to right, #984a99, #aa154f); color: #000; }
-  .chip.python { background: linear-gradient(to right, #306998, #458ad4); color: #000; }
-  .chip.html { background: linear-gradient(to right, #e34c26, #d69d85); color: #000; }
-  .chip.css { background: linear-gradient(to right, #5b7cff, #0852ff); color: #000; }
-  .chip.javascript { background: linear-gradient(to right, #e9e1af, #f1e44f); color: #000;}
-  .chip.android { background: linear-gradient(to right, #a7c055, #9bb976); color: #000;}
-  .chip.git { background: linear-gradient(to right, #e0d6d5, #817473); color: #000; }
-  .chip.jira { background: linear-gradient(to right, #95a3dd, #1455eb); color: #000; }
-  .chip.firebase { background: linear-gradient(to right, #d8c6ab, #e49219); color: #000;}
+.chip.java { background: linear-gradient(to right, #f89820, #ffcc00); color: #000; }
+.chip.kotlin { background: linear-gradient(to right, #984a99, #aa154f); color: #000; }
+.chip.python { background: linear-gradient(to right, #306998, #458ad4); color: #000; }
+.chip.html { background: linear-gradient(to right, #e34c26, #d69d85); color: #000; }
+.chip.css { background: linear-gradient(to right, #5b7cff, #0852ff); color: #000; }
+.chip.javascript { background: linear-gradient(to right, #e9e1af, #f1e44f); color: #000; }
+.chip.android { background: linear-gradient(to right, #a7c055, #9bb976); color: #000; }
+.chip.git { background: linear-gradient(to right, #e0d6d5, #817473); color: #000; }
+.chip.jira { background: linear-gradient(to right, #95a3dd, #1455eb); color: #000; }
+.chip.firebase { background: linear-gradient(to right, #d8c6ab, #e49219); color: #000; }
+.chip.react { background: linear-gradient(to right, #61dafb, #21a1f1); color: #000; }
+.chip.swift { background: linear-gradient(to right, #f05138, #fa7343); color: #fff; }
+.chip.jetpack-compose { background: linear-gradient(to right, #3ddc84, #2c7a7b); color: #fff; }
+.chip.kmp { background: linear-gradient(to right, #b57ee4, #5e3db4); color: #fff; }
+.chip.react-native { background: linear-gradient(to right, #61dafb, #21a1f1); color: #000; }
+.chip.react { background: linear-gradient(to right, #00d8ff, #007fbf); color: #000; }
+.chip.swift { background: linear-gradient(to right, #f05138, #fa7343); color: #fff; }
+.chip.swiftui { background: linear-gradient(to right, #0d96f6, #005c99); color: #fff; }
+.chip.api { background: linear-gradient(to right, #9eb3c2, #3c6e71); color: #fff; }
+.chip.figma { background: linear-gradient(to right, #a259ff, #f24e1e); color: #fff; }
+.chip.store { background: linear-gradient(to right, #34c759, #28a745); color: #fff; }
+
 
 
 
