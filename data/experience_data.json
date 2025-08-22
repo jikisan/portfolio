@@ -1,0 +1,105 @@
+{
+  "experiences": [
+    {
+      "id": "tvstartup",
+      "period": "Feb 2025 - May 2025",
+      "jobTitle": "Mobile and TV App Developer",
+      "company": "TVStartup Inc",
+      "accentColor": "#41516C",
+      "achievements": [
+        "Built and maintained Android, Apple TV, and Roku apps with consistent UX across platforms.",
+        "Published 30+ channels on Google Play and Roku, boosting visibility and engagement.",
+        "Delivered advanced tech support, improving issue resolution and response time.",
+        "Migrated Android app to Jetpack Compose (Kotlin Multiplatform), improving UI scalability and dev speed."
+      ]
+    },
+    {
+      "id": "timex",
+      "period": "May 2023 - Feb 2025",
+      "jobTitle": "Android Developer",
+      "company": "Timex Group",
+      "accentColor": "#41516C",
+      "achievements": [
+        "Created Android watch simulation, cutting marketing costs by 90%.",
+        "Built a custom web chart library, improving UX by 20%.",
+        "Led code reviews that cut app crashes by 50% and improved stability.",
+        "Automated web app tests with Selenium, reducing effort and time by 60%.",
+        "Improved app load time by 40% through performance tuning and code optimization."
+      ]
+    },
+    {
+      "id": "freelance",
+      "period": "May 2022 - May 2023",
+      "jobTitle": "Freelance Software Developer",
+      "company": null,
+      "accentColor": "#FBCA3E",
+      "achievements": [
+        "Built an e-commerce app for a small business, increasing customer acquisition by 40%.",
+        "Completed a complex project ahead of schedule and under budget.",
+        "Developed a Windows app for vital sign graphing and CDSS, reducing nurse workload by 80%.",
+        "Created an e-commerce Android app for an HVAC business, raising technician income by 20%."
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "id": "istqb",
+      "title": "ISTQB Certified Tester",
+      "issuer": "ISTQB® - International Software Testing Qualifications Board",
+      "issued": "Apr 2024",
+      "expiration": "No Expiration Date",
+      "credentialId": "24-CTFL-243467-12",
+      "credentialUrl": "https://zertdb.isqi.org/en/certification/verification/t/sV%21%24y0aF%24L%213290LrmdJ",
+      "skills": [
+        "Software Testing",
+        "Static Testing",
+        "Software Testing Life Cycle (STLC)",
+        "Test Management Approach (TMAP)",
+        "Testing Tools"
+      ]
+    },
+    {
+      "id": "android-kotlin",
+      "title": "STATE OF THE ART ANDROID APP DEVELOPMENT IN KOTLIN",
+      "issuer": "Udemy",
+      "issued": "Dec 2023",
+      "expiration": "No Expiration Date",
+      "credentialId": "UC-a049da2b-d733-470f-87f8-4ef580fb4c52",
+      "credentialUrl": "https://www.udemy.com/certificate/UC-a049da2b-d733-470f-87f8-4ef580fb4c52/",
+      "skills": [
+        "MVVM",
+        "Unit Testing",
+        "Retrofit",
+        "Dagger2",
+        "Data Binding"
+      ]
+    },
+    {
+      "id": "android-advanced",
+      "title": "ANDROID MOBILE APPLICATION DEVELOPMENT (ADVANCED TRAINING)",
+      "issuer": "FIT Academy",
+      "issued": "Nov 2023",
+      "expiration": "No Expiration Date",
+      "credentialId": "FIT-0420231202217187",
+      "credentialUrl": "https://certificate.fitacademy.ph/validate/index.php?cer_id=dbfc8da4cc71576a9049d1be1ee4ad406af40115bb672984e7b35865dca03c53",
+      "sourceCodeUrl": "https://github.com/jikisan/FITAdvanceAndroidTraining",
+      "skills": [
+        "Volley Library",
+        "Google Maps API",
+        "SQLite",
+        "Geocoding",
+        "OOP",
+        "Kotlin"
+      ]
+    },
+    {
+      "id": "jira-fundamentals",
+      "title": "JIRA FUNDAMENTALS BADGE",
+      "issuer": "ThriveDX",
+      "issued": "Jan 2023",
+      "expiration": "No Expiration Date",
+      "credentialId": "243060987",
+      "credentialUrl": "https://university.atlassian.com/student/award/7XJ4J33KhdLSJAmeQHhFDx8E"
+    }
+  ]
+}

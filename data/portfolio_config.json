@@ -1,0 +1,44 @@
+{
+  "personal": {
+    "name": "June Kyle Santerna",
+    "title": "Software Developer",
+    "avatar": "images/formal_id.png",
+    "location": "Cebu City, Cebu, Philippines, 6000",
+    "email": "santernakyle@gmail.com",
+    "resume": "./File/June Kyle Santerna - CV.pdf",
+    "social": {
+      "github": "https://github.com/jikisan",
+      "linkedin": "https://www.linkedin.com/in/jkyle/"
+    }
+  },
+  "about": {
+    "description": "I am a dedicated Software developer with hands-on experience crafting intuitive and robust applications and programs. With a passion for innovation and a keen eye for detail, I thrive on transforming ideas into impactful digital solutions.\n\nMy journey in Software development has equipped me with a deep understanding of software technologies, allowing me to stay at the forefront of industry trends and deliver exceptional user experiences. Committed to continuous learning and growth, I am eager to take on new challenges and contribute to projects that push the boundaries of software development."
+  },
+  "skills": [
+    { "name": "Java", "icon": "fab fa-java", "class": "java" },
+    { "name": "Kotlin", "icon": "fas fa-file-code", "class": "kotlin" },
+    { "name": "Jetpack Compose", "icon": "fas fa-mobile-alt", "class": "jetpack-compose" },
+    { "name": "Kotlin Multiplatform", "icon": "fas fa-sync-alt", "class": "kmp" },
+    { "name": "React Native", "icon": "fab fa-react", "class": "react-native" },
+    { "name": "React", "icon": "fab fa-react", "class": "react" },
+    { "name": "Swift", "icon": "fab fa-swift", "class": "swift" },
+    { "name": "SwiftUI", "icon": "fas fa-laptop-code", "class": "swiftui" },
+    { "name": "JavaScript", "icon": "fab fa-js", "class": "javascript" },
+    { "name": "HTML", "icon": "fab fa-html5", "class": "html" },
+    { "name": "CSS", "icon": "fab fa-css3-alt", "class": "css" },
+    { "name": "Android Studio", "icon": "fab fa-android", "class": "android" },
+    { "name": "Github", "icon": "fab fa-github", "class": "git" },
+    { "name": "Jira", "icon": "fab fa-jira", "class": "jira" },
+    { "name": "Firebase", "icon": "fas fa-fire", "class": "firebase" },
+    { "name": "REST API", "icon": "fas fa-plug", "class": "api" },
+    { "name": "Figma", "icon": "fab fa-figma", "class": "figma" },
+    { "name": "App Publishing", "icon": "fas fa-store", "class": "store" }
+  ],
+  "navigation": [
+    { "href": "#about", "text": "About me" },
+    { "href": "#skills", "text": "Skills" },
+    { "href": "#projects", "text": "Projects" },
+    { "href": "#experience", "text": "Experiences" },
+    { "href": "#certificates", "text": "Certificates" }
+  ]
+}

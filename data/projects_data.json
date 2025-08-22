@@ -1,0 +1,129 @@
+{
+  "projects": [
+    {
+      "id": "compose-multiplatform-ecommerce",
+      "title": "Compose Multiplatform E-Commerce",
+      "description": "A MODERN E-COMMERCE ANDROID AND iOS APPLICATION BUILT USING COMPOSE MULTIPLATFORM.",
+      "image": "images/mockups/kmm_ecommerce_mockup.png",
+      "lightboxTitle": "StoreApp - AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION",
+      "technologies": [
+        "Compose Multiplatform",
+        "Jetpack Compose",
+        "Kotlin Multiplatform",
+        "Kotlin Flow",
+        "StateFlow",
+        "Coroutines",
+        "MVVM Architecture",
+        "Clean Architecture Principles",
+        "Sealed Classes",
+        "Repository Pattern",
+        "Ktor Client",
+        "Material Design 3",
+        "Navigation Component (for Compose)",
+        "Gradle Kotlin DSL",
+        "Kotlinx Serialization"
+      ]
+    },
+    {
+      "id": "vstech",
+      "title": "VSTECH",
+      "description": "AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION WINDOWS APPLICATION.",
+      "image": "images/mockups/vstech_mockup.png",
+      "lightboxTitle": "VSTECH - AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION",
+      "technologies": [
+        "Java",
+        "SQLite",
+        "JDBC",
+        "JavaFX",
+        "Apache POI"
+      ]
+    },
+    {
+      "id": "ph-heroes",
+      "title": "PH Heroes",
+      "description": "A MOBILE APP HONORING THE HEROES OF THE PHILIPPINES, PROVIDING DETAILED PROFILES AND INSIGHTS INTO THEIR REMARKABLE LIVES.",
+      "image": "images/mockups/phhereoes.png",
+      "lightboxTitle": "PH Heroes - A MOBILE APP HONORING THE HEROES OF THE PHILIPPINES",
+      "technologies": [
+        "Kotlin",
+        "Jetpack Compose",
+        "Dependency injection with Dagger-Hilt",
+        "Clean Architecture",
+        "MVVM",
+        "Utilize ROOM as local database",
+        "Fetch API using retrofit",
+        "Palette API",
+        "Develop a backend server with KTOR",
+        "Dependency injection with Koin"
+      ]
+    },
+    {
+      "id": "busyan",
+      "title": "BusYan",
+      "description": "A MOBILE APPLICATION TAILORED FOR COMMUTERS, FACILITATING SEAT RESERVATIONS ON NEARBY JEEPNEYS FOR ENHANCED COMMUTING CONVENIENCE.",
+      "image": "images/mockups/busyan.png",
+      "lightboxTitle": "BusYan - A MOBILE APPLICATION TAILORED FOR COMMUTERS",
+      "technologies": [
+        "Java",
+        "Firebase (Auth & Database)",
+        "Google Places API",
+        "Google Maps API",
+        "REST API",
+        "Retrofit"
+      ]
+    },
+    {
+      "id": "fish2locals",
+      "title": "Fish2Locals",
+      "description": "A MOBILE E-COMMERCE APPLICATION TO FACILITATE BETWEEN FISH BUYERS AND SELLERS.",
+      "image": "images/mockups/f2l2.png",
+      "lightboxTitle": "Fish2Locals - A MOBILE E-COMMERCE APPLICATION",
+      "technologies": [
+        "Java",
+        "Firebase (Auth & Database)",
+        "Google Places API",
+        "Google Maps API",
+        "Geocoding"
+      ]
+    },
+    {
+      "id": "servicehub",
+      "title": "ServiceHub",
+      "description": "A MOBILE E-COMMERCE APPLICATION DESIGNED FOR THE HVAC INDUSTRY TO FACILITATE THE EASY BOOKING OF SERVICES.",
+      "image": "images/mockups/servicehub3.png",
+      "lightboxTitle": "ServiceHub - A MOBILE E-COMMERCE APPLICATION FOR HVAC SERVICES",
+      "technologies": [
+        "Java",
+        "Firebase (Auth & Database)",
+        "Google Places API",
+        "Google Maps API"
+      ]
+    },
+    {
+      "id": "revic",
+      "title": "Revic",
+      "description": "A PROFESSIONAL NETWORKING MOBILE PLATFORM FOR DJ'S AND MUSICIANS.",
+      "image": "images/mockups/revic.png",
+      "lightboxTitle": "Revic - A PROFESSIONAL NETWORKING PLATFORM FOR DJ'S AND MUSICIANS",
+      "technologies": [
+        "Java",
+        "Firebase (Auth & Database)",
+        "Google Places API",
+        "Google Maps API"
+      ]
+    },
+    {
+      "id": "jaja",
+      "title": "JAJA",
+      "description": "A SOCIAL MEDIA MOBILE PLATFORM FOR AUDIO ENTHUSIASTS.",
+      "image": "images/mockups/jaja.png",
+      "lightboxTitle": "JAJA - A SOCIAL MEDIA PLATFORM FOR AUDIO ENTHUSIASTS",
+      "technologies": [
+        "Java",
+        "Firebase (Auth & Database)",
+        "RecordView API"
+      ]
+    }
+  ],
+  "githubUrl": "https://github.com/jikisan"
+}
