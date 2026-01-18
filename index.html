@@ -44,7 +44,7 @@
 				<h2 id="about">About Me</h2>
 			</header>
 			<p><!-- About content will be populated by JavaScript --></p>
-			<a href="./File/June Kyle Santerna - CV.pdf" class="button" download><i class="fa-solid fa-file-arrow-down"></i>Download Resume</a>
+			<a href="#" id="download-resume-btn" class="button"><i class="fa-solid fa-file-arrow-down"></i>Download Resume</a>
 		</section>
 
 		<section>
@@ -113,7 +113,13 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-	
+
+	<!-- jsPDF Library for PDF generation -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+	<!-- Resume Generator Script -->
+	<script src="resume_generator.js"></script>
+
 	<!-- Portfolio App Script -->
 	<script src="portfolio_app.js"></script>
 

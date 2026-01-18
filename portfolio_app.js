@@ -108,18 +108,42 @@ class PortfolioApp {
         console.warn('About header not found');
         return;
       }
-      
+
       const aboutSection = aboutHeader.closest('section');
       if (!aboutSection) {
         console.warn('About section not found');
         return;
       }
-      
+
       const aboutParagraph = aboutSection.querySelector('p');
-      const downloadButton = aboutSection.querySelector('a.button');
-      
+      const downloadButton = aboutSection.querySelector('#download-resume-btn');
+
       if (aboutParagraph) aboutParagraph.textContent = this.config.about.description;
-      if (downloadButton) downloadButton.href = this.config.personal.resume;
+
+      // Set up download button to generate PDF dynamically
+      if (downloadButton) {
+        downloadButton.addEventListener('click', async (e) => {
+          e.preventDefault();
+          console.log('Download resume button clicked');
+
+          // Show loading state
+          const originalText = downloadButton.innerHTML;
+          downloadButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>Generating...';
+          downloadButton.style.pointerEvents = 'none';
+
+          try {
+            // Generate PDF
+            await window.resumeGenerator.generatePDF();
+          } catch (error) {
+            console.error('Error generating resume:', error);
+            alert('Failed to generate resume. Please try again.');
+          } finally {
+            // Restore button state
+            downloadButton.innerHTML = originalText;
+            downloadButton.style.pointerEvents = 'auto';
+          }
+        });
+      }
     } catch (error) {
       console.error('Error rendering about section:', error);
     }

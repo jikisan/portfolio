@@ -2,14 +2,14 @@
   "experiences": [
     {
       "id": "onlinejobsph-android-project",
-      "period": "2024 - 2025",
-      "jobTitle": "Android Developer",
-      "company": "OnlineJobs.PH (Platform)",
+      "period": "2024 - Present",
+      "jobTitle": "Web and Mobile Developer",
+      "company": "OnlineJobs.PH",
       "accentColor": "#2D3748",
       "achievements": [
         "Developed and maintained Android applications with a focus on performance, stability, and user experience.",
         "Implemented core app features using Kotlin and modern Android architecture components.",
-        "Integrated backend APIs to support real-time data updates and dynamic content.",
+        "Integrated backend APIs to support real-time data updates and dynamic content using React.",
         "Optimized application performance, reducing crashes and improving responsiveness across devices.",
         "Collaborated with cross-functional teams to deliver features aligned with product requirements."
       ]
