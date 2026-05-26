@@ -213,22 +213,54 @@ class PortfolioApp {
       }
       
       console.log('About to render', this.projects.projects.length, 'projects');
-      
-      projectsRow.innerHTML = this.projects.projects.map(project => `
-        <article class="col-6 col-12-xsmall work-item">
-          <a href="${project.image}" class="image fit thumb" data-lightbox="work-item"
-            data-title="${project.lightboxTitle}">
-            <img src="${project.image}" alt="${project.title}" />
-          </a>
-          <h3>${project.title}</h3>
-          <p>${project.description}</p>
-          <br>
-          <h3>Tech used:</h3>
-          <ul>
-            ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
-          </ul>
-        </article>
-      `).join('');
+
+      // Collect unique tabs from all project types
+      const allTypes = new Set();
+      this.projects.projects.forEach(p => (p.type || []).forEach(t => allTypes.add(t)));
+      const tabs = ['All', 'Highlighted', ...Array.from(allTypes).sort()];
+
+      // Build tab bar
+      const tabBar = document.createElement('div');
+      tabBar.className = 'project-tabs';
+      tabBar.innerHTML = tabs.map(tab =>
+        `<button class="project-tab${tab === 'Highlighted' ? ' active' : ''}" data-tab="${tab}">${tab}</button>`
+      ).join('');
+      projectsRow.parentElement.insertBefore(tabBar, projectsRow);
+
+      // Render all project cards
+      const renderProjectCards = (filter) => {
+        const filtered = filter === 'All'
+          ? this.projects.projects
+          : filter === 'Highlighted'
+            ? this.projects.projects.filter(p => p.highlighted)
+            : this.projects.projects.filter(p => (p.type || []).includes(filter));
+        projectsRow.innerHTML = filtered.map(project => `
+          <article class="col-6 col-12-xsmall work-item">
+            <a href="${project.image}" class="image fit thumb" data-lightbox="work-item"
+              data-title="${project.lightboxTitle}">
+              <img src="${project.image}" alt="${project.title}" />
+            </a>
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            ${project.link ? `<a href="${project.link}" class="button small project-view-btn" target="_blank" rel="noopener noreferrer">View</a>` : ''}
+            <br>
+            <h3>Tech used:</h3>
+            <ul>
+              ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
+            </ul>
+          </article>
+        `).join('');
+      };
+
+      renderProjectCards('Highlighted');
+
+      tabBar.addEventListener('click', (e) => {
+        const btn = e.target.closest('.project-tab');
+        if (!btn) return;
+        tabBar.querySelectorAll('.project-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProjectCards(btn.dataset.tab);
+      });
 
       console.log('Projects HTML rendered successfully');
 

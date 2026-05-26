@@ -6,6 +6,9 @@
       "description": "A MODERN E-COMMERCE ANDROID AND iOS APPLICATION BUILT USING COMPOSE MULTIPLATFORM.",
       "image": "images/mockups/kmm_ecommerce_mockup.png",
       "lightboxTitle": "StoreApp - AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION",
+      "type": ["Android", "iOS"],
+      "highlighted": true,
+      "link": "",
       "technologies": [
         "Compose Multiplatform",
         "Jetpack Compose",
@@ -30,6 +33,9 @@
       "description": "AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION WINDOWS APPLICATION.",
       "image": "images/mockups/vstech_mockup.png",
       "lightboxTitle": "VSTECH - AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION",
+      "type": ["Windows"],
+      "highlighted": false,
+      "link": "",
       "technologies": [
         "Java",
         "SQLite",
@@ -44,6 +50,9 @@
       "description": "A MOBILE APP HONORING THE HEROES OF THE PHILIPPINES, PROVIDING DETAILED PROFILES AND INSIGHTS INTO THEIR REMARKABLE LIVES.",
       "image": "images/mockups/phhereoes.png",
       "lightboxTitle": "PH Heroes - A MOBILE APP HONORING THE HEROES OF THE PHILIPPINES",
+      "type": ["Android"],
+      "highlighted": false,
+      "link": "",
       "technologies": [
         "Kotlin",
         "Jetpack Compose",
@@ -63,6 +72,9 @@
       "description": "A MOBILE APPLICATION TAILORED FOR COMMUTERS, FACILITATING SEAT RESERVATIONS ON NEARBY JEEPNEYS FOR ENHANCED COMMUTING CONVENIENCE.",
       "image": "images/mockups/busyan.png",
       "lightboxTitle": "BusYan - A MOBILE APPLICATION TAILORED FOR COMMUTERS",
+      "type": ["Android"],
+      "highlighted": false,
+      "link": "",
       "technologies": [
         "Java",
         "Firebase (Auth & Database)",
@@ -78,6 +90,9 @@
       "description": "A MOBILE E-COMMERCE APPLICATION TO FACILITATE BETWEEN FISH BUYERS AND SELLERS.",
       "image": "images/mockups/f2l2.png",
       "lightboxTitle": "Fish2Locals - A MOBILE E-COMMERCE APPLICATION",
+      "type": ["Android"],
+      "highlighted": false,
+      "link": "",
       "technologies": [
         "Java",
         "Firebase (Auth & Database)",
@@ -92,6 +107,9 @@
       "description": "A MOBILE E-COMMERCE APPLICATION DESIGNED FOR THE HVAC INDUSTRY TO FACILITATE THE EASY BOOKING OF SERVICES.",
       "image": "images/mockups/servicehub3.png",
       "lightboxTitle": "ServiceHub - A MOBILE E-COMMERCE APPLICATION FOR HVAC SERVICES",
+      "type": ["Android"],
+      "highlighted": false,
+      "link": "",
       "technologies": [
         "Java",
         "Firebase (Auth & Database)",
@@ -105,6 +123,9 @@
       "description": "A PROFESSIONAL NETWORKING MOBILE PLATFORM FOR DJ'S AND MUSICIANS.",
       "image": "images/mockups/revic.png",
       "lightboxTitle": "Revic - A PROFESSIONAL NETWORKING PLATFORM FOR DJ'S AND MUSICIANS",
+      "type": ["Android"],
+      "highlighted": false,
+      "link": "",
       "technologies": [
         "Java",
         "Firebase (Auth & Database)",
@@ -118,6 +139,9 @@
       "description": "A SOCIAL MEDIA MOBILE PLATFORM FOR AUDIO ENTHUSIASTS.",
       "image": "images/mockups/jaja.png",
       "lightboxTitle": "JAJA - A SOCIAL MEDIA PLATFORM FOR AUDIO ENTHUSIASTS",
+      "type": ["Android"],
+      "highlighted": false,
+      "link": "",
       "technologies": [
         "Java",
         "Firebase (Auth & Database)",
