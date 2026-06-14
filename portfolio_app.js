@@ -302,7 +302,7 @@ class PortfolioApp {
         `).join('');
       };
 
-      renderProjectCards('Highlighted');
+      renderProjectCards('Highlights');
 
       tabBar.addEventListener('click', (e) => {
         const btn = e.target.closest('.project-tab');
