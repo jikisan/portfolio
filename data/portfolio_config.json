@@ -34,7 +34,12 @@
     { "name": "Jira", "icon": "fab fa-jira", "class": "jira" },
     { "name": "Firebase", "icon": "fas fa-fire", "class": "firebase" },
     { "name": "Figma", "icon": "fab fa-figma", "class": "figma" },
-    { "name": "App Publishing", "icon": "fas fa-store", "class": "store" }
+    { "name": "App Publishing", "icon": "fas fa-store", "class": "store" },
+    { "name": "Claude", "icon": "fas fa-robot", "class": "claude" },
+    { "name": "ChatGPT", "icon": "fas fa-comment-dots", "class": "chatgpt" },
+    { "name": "Cursor", "icon": "fas fa-i-cursor", "class": "cursor" },
+    { "name": "Lovable", "icon": "fas fa-heart", "class": "lovable" },
+    { "name": "Google Stitch", "icon": "fas fa-palette", "class": "stitch" }
   ],
   "navigation": [
     { "href": "#about", "text": "About me" },

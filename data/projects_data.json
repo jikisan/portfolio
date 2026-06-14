@@ -1,13 +1,41 @@
 {
   "projects": [
     {
+      "id": "taily",
+      "title": "Taily",
+      "description": "A COMPLETE PET CARE MANAGEMENT APP FOR ANDROID AND iOS WITH HEALTH TRACKING, AI DOCUMENT SCANNING, AND CO-PARENTING VIA QR CODES.",
+      "image": "images/mockups/taily.png",
+      "lightboxTitle": "Taily - YOUR PET'S DIGITAL CARE COMPANION",
+      "type": ["Android", "iOS"],
+      "highlighted": true,
+      "link": {
+        "android": "",
+        "ios": "https://apps.apple.com/ph/app/taily-smart-pet-care/id6767614669"
+      },
+      "technologies": [
+        "Kotlin Multiplatform",
+        "Supabase (Auth, Database, Storage)",
+        "Supabase RLS Policies",
+        "Koin (Dependency Injection)",
+        "Ktor Client",
+        "CameraX",
+        "AI Document Extraction",
+        "Google Firebase (Push Notifications)",
+        "MVVM Architecture",
+        "Repository Pattern",
+        "Coroutines",
+        "Expect/Actual Pattern",
+        "Deep Linking"
+      ]
+    },
+    {
       "id": "compose-multiplatform-ecommerce",
       "title": "Compose Multiplatform E-Commerce",
       "description": "A MODERN E-COMMERCE ANDROID AND iOS APPLICATION BUILT USING COMPOSE MULTIPLATFORM.",
       "image": "images/mockups/kmm_ecommerce_mockup.png",
       "lightboxTitle": "StoreApp - AN AUTOMATED VITALSIGN GRAPHING & CDSS INTEGRATION",
       "type": ["Android", "iOS"],
-      "highlighted": true,
+      "highlighted": false,
       "link": "",
       "technologies": [
         "Compose Multiplatform",

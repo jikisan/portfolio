@@ -201,6 +201,32 @@ class PortfolioApp {
     }
   }
 
+  renderProjectLinks(link) {
+    if (!link) return '';
+
+    const storeBtn = (href, variant, icon, smallText, bigText) => `
+      <a href="${href}" class="store-btn ${variant}" target="_blank" rel="noopener noreferrer">
+        <i class="${icon}"></i>
+        <span class="store-meta">
+<!--          <span class="small">${smallText}</span>-->
+          <span class="big">${bigText}</span>
+        </span>
+      </a>
+    `;
+
+    if (typeof link === 'string') {
+      return link
+        ? `<div class="project-links"><a href="${link}" class="button small project-view-btn" target="_blank" rel="noopener noreferrer">View</a></div>`
+        : '';
+    }
+
+    const parts = [];
+    if (link.android) parts.push(storeBtn(link.android, 'android', 'fab fa-google-play', 'GET IT ON', 'Google Play'));
+    if (link.ios) parts.push(storeBtn(link.ios, 'ios', 'fab fa-app-store-ios', 'Download on the', 'App Store'));
+    if (!parts.length) return '';
+    return `<div class="project-links">${parts.join('')}</div>`;
+  }
+
   renderProjects() {
     try {
       console.log('renderProjects called');
@@ -241,13 +267,13 @@ class PortfolioApp {
       // Collect unique tabs from all project types
       const allTypes = new Set();
       this.projects.projects.forEach(p => (p.type || []).forEach(t => allTypes.add(t)));
-      const tabs = ['All', 'Highlighted', ...Array.from(allTypes).sort()];
+      const tabs = ['All', 'Highlights', ...Array.from(allTypes).sort()];
 
       // Build tab bar
       const tabBar = document.createElement('div');
       tabBar.className = 'project-tabs';
       tabBar.innerHTML = tabs.map(tab =>
-        `<button class="project-tab${tab === 'Highlighted' ? ' active' : ''}" data-tab="${tab}">${tab}</button>`
+        `<button class="project-tab${tab === 'Highlights' ? ' active' : ''}" data-tab="${tab}">${tab}</button>`
       ).join('');
       projectsRow.parentElement.insertBefore(tabBar, projectsRow);
 
@@ -255,7 +281,7 @@ class PortfolioApp {
       const renderProjectCards = (filter) => {
         const filtered = filter === 'All'
           ? this.projects.projects
-          : filter === 'Highlighted'
+          : filter === 'Highlights'
             ? this.projects.projects.filter(p => p.highlighted)
             : this.projects.projects.filter(p => (p.type || []).includes(filter));
         projectsRow.innerHTML = filtered.map(project => `
@@ -266,7 +292,7 @@ class PortfolioApp {
             </a>
             <h3>${project.title}</h3>
             <p>${project.description}</p>
-            ${project.link ? `<a href="${project.link}" class="button small project-view-btn" target="_blank" rel="noopener noreferrer">View</a>` : ''}
+            ${this.renderProjectLinks(project.link)}
             <br>
             <h3>Tech used:</h3>
             <ul>

@@ -3411,6 +3411,11 @@ body.is-touch .poptrox-popup .closer {
 .chip.api { background: linear-gradient(to right, #9eb3c2, #3c6e71); color: #fff; }
 .chip.figma { background: linear-gradient(to right, #a259ff, #f24e1e); color: #fff; }
 .chip.store { background: linear-gradient(to right, #34c759, #28a745); color: #fff; }
+.chip.claude { background: linear-gradient(to right, #d97757, #b8552f); color: #fff; }
+.chip.chatgpt { background: linear-gradient(to right, #10a37f, #0d8466); color: #fff; }
+.chip.cursor { background: linear-gradient(to right, #4a4a4a, #1a1a1a); color: #fff; }
+.chip.lovable { background: linear-gradient(to right, #ff4d8b, #c9184a); color: #fff; }
+.chip.stitch { background: linear-gradient(to right, #4285f4, #34a853); color: #fff; }
 
 
 
@@ -3419,6 +3424,85 @@ body.is-touch .poptrox-popup .closer {
 .project-view-btn {
   margin-bottom: 0.75em;
   min-width: 0;
+}
+
+/* Project store buttons (Android / iOS) */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin: 0.75em 0 1em;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.55em 1.1em;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.store-btn i {
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.store-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  filter: brightness(1.08);
+  text-decoration: none;
+}
+
+.store-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.store-btn .store-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.store-btn .store-meta .small {
+  font-size: 0.65em;
+  font-weight: 500;
+  opacity: 0.85;
+  letter-spacing: 0.08em;
+}
+
+.store-btn .store-meta .big {
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.store-btn.android {
+  background: linear-gradient(135deg, #34a853 0%, #137333 100%);
+  color: #fff;
+}
+
+.store-btn.ios {
+  background: linear-gradient(135deg, #2c2c2e 0%, #000 100%);
+  color: #fff;
+}
+
+.store-btn.disabled {
+  background: linear-gradient(135deg, #555 0%, #2a2a2a 100%);
+  color: #bbb;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
 }
 
 /* Project tabs */
