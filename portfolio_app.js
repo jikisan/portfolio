@@ -23,7 +23,10 @@ class PortfolioApp {
       
       console.log('Rendering skills...');
       this.renderSkills();
-      
+
+      console.log('Rendering tools...');
+      this.renderTools();
+
       console.log('Rendering projects...');
       this.renderProjects();
       
@@ -169,11 +172,32 @@ class PortfolioApp {
         return;
       }
       
-      chipGroup.innerHTML = this.config.skills.map(skill => 
+      chipGroup.innerHTML = this.config.skills.map(skill =>
         `<span class="chip ${skill.class}"><i class="${skill.icon}"></i>${skill.name}</span>`
       ).join('');
     } catch (error) {
       console.error('Error rendering skills:', error);
+    }
+  }
+
+  renderTools() {
+    try {
+      const toolsChipGroup = document.querySelector('#toolsChipGroup');
+      if (!toolsChipGroup) {
+        console.warn('Tools chip group not found');
+        return;
+      }
+
+      if (!this.config.tools) {
+        console.warn('No tools in config');
+        return;
+      }
+
+      toolsChipGroup.innerHTML = this.config.tools.map(tool =>
+        `<span class="chip ${tool.class}"><i class="${tool.icon}"></i>${tool.name}</span>`
+      ).join('');
+    } catch (error) {
+      console.error('Error rendering tools:', error);
     }
   }
 

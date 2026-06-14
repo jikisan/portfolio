@@ -26,17 +26,20 @@
     { "name": "JavaScript", "icon": "fab fa-js", "class": "javascript" },
     { "name": "HTML", "icon": "fab fa-html5", "class": "html" },
     { "name": "CSS", "icon": "fab fa-css3-alt", "class": "css" },
+    { "name": "REST API", "icon": "fas fa-plug", "class": "api" }
+  ],
+  "tools": [
     { "name": "Android Studio", "icon": "fab fa-android", "class": "android" },
     { "name": "Github", "icon": "fab fa-github", "class": "git" },
     { "name": "Jira", "icon": "fab fa-jira", "class": "jira" },
     { "name": "Firebase", "icon": "fas fa-fire", "class": "firebase" },
-    { "name": "REST API", "icon": "fas fa-plug", "class": "api" },
     { "name": "Figma", "icon": "fab fa-figma", "class": "figma" },
     { "name": "App Publishing", "icon": "fas fa-store", "class": "store" }
   ],
   "navigation": [
     { "href": "#about", "text": "About me" },
     { "href": "#skills", "text": "Skills" },
+    { "href": "#tools", "text": "Tools" },
     { "href": "#projects", "text": "Projects" },
     { "href": "#experience", "text": "Experiences" },
     { "href": "#certificates", "text": "Certificates" }
