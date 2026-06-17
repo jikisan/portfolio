@@ -3400,6 +3400,8 @@ body.is-touch .poptrox-popup .closer {
 .chip.git { background: linear-gradient(to right, #e0d6d5, #817473); color: #000; }
 .chip.jira { background: linear-gradient(to right, #95a3dd, #1455eb); color: #000; }
 .chip.firebase { background: linear-gradient(to right, #d8c6ab, #e49219); color: #000; }
+.chip.supabase { background: linear-gradient(to right, #1a1a2e, #3ecf8e); color: #fff; }
+.chip.xcode { background: linear-gradient(to right, #1c6ef3, #29abe2); color: #fff; }
 .chip.react { background: linear-gradient(to right, #61dafb, #21a1f1); color: #000; }
 .chip.swift { background: linear-gradient(to right, #f05138, #fa7343); color: #fff; }
 .chip.jetpack-compose { background: linear-gradient(to right, #3ddc84, #2c7a7b); color: #fff; }

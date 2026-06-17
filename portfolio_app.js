@@ -267,13 +267,13 @@ class PortfolioApp {
       // Collect unique tabs from all project types
       const allTypes = new Set();
       this.projects.projects.forEach(p => (p.type || []).forEach(t => allTypes.add(t)));
-      const tabs = ['All', 'Highlights', ...Array.from(allTypes).sort()];
+      const tabs = ['All', 'Featured', ...Array.from(allTypes).sort()];
 
       // Build tab bar
       const tabBar = document.createElement('div');
       tabBar.className = 'project-tabs';
       tabBar.innerHTML = tabs.map(tab =>
-        `<button class="project-tab${tab === 'Highlights' ? ' active' : ''}" data-tab="${tab}">${tab}</button>`
+        `<button class="project-tab${tab === 'Featured' ? ' active' : ''}" data-tab="${tab}">${tab}</button>`
       ).join('');
       projectsRow.parentElement.insertBefore(tabBar, projectsRow);
 
@@ -281,7 +281,7 @@ class PortfolioApp {
       const renderProjectCards = (filter) => {
         const filtered = filter === 'All'
           ? this.projects.projects
-          : filter === 'Highlights'
+          : filter === 'Featured'
             ? this.projects.projects.filter(p => p.highlighted)
             : this.projects.projects.filter(p => (p.type || []).includes(filter));
         projectsRow.innerHTML = filtered.map(project => `
@@ -302,7 +302,7 @@ class PortfolioApp {
         `).join('');
       };
 
-      renderProjectCards('Highlights');
+      renderProjectCards('Featured');
 
       tabBar.addEventListener('click', (e) => {
         const btn = e.target.closest('.project-tab');

@@ -26,15 +26,17 @@
     { "name": "JavaScript", "icon": "fab fa-js", "class": "javascript" },
     { "name": "HTML", "icon": "fab fa-html5", "class": "html" },
     { "name": "CSS", "icon": "fab fa-css3-alt", "class": "css" },
-    { "name": "REST API", "icon": "fas fa-plug", "class": "api" }
+    { "name": "REST API", "icon": "fas fa-plug", "class": "api" },
+    { "name": "Firebase", "icon": "fas fa-fire", "class": "firebase" },
+    { "name": "Supabase", "icon": "fas fa-database", "class": "supabase" },
+    { "name": "App Publishing", "icon": "fas fa-store", "class": "store" }
   ],
   "tools": [
     { "name": "Android Studio", "icon": "fab fa-android", "class": "android" },
+    { "name": "Xcode", "icon": "fab fa-apple", "class": "xcode" },
     { "name": "Github", "icon": "fab fa-github", "class": "git" },
     { "name": "Jira", "icon": "fab fa-jira", "class": "jira" },
-    { "name": "Firebase", "icon": "fas fa-fire", "class": "firebase" },
     { "name": "Figma", "icon": "fab fa-figma", "class": "figma" },
-    { "name": "App Publishing", "icon": "fas fa-store", "class": "store" },
     { "name": "Claude", "icon": "fas fa-robot", "class": "claude" },
     { "name": "ChatGPT", "icon": "fas fa-comment-dots", "class": "chatgpt" },
     { "name": "Cursor", "icon": "fas fa-i-cursor", "class": "cursor" },
