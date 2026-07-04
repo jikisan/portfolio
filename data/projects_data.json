@@ -9,7 +9,7 @@
       "type": ["Android", "iOS"],
       "highlighted": true,
       "link": {
-        "android": "",
+        "android": "https://play.google.com/store/apps/details?id=org.jikisan.taily",
         "ios": "https://apps.apple.com/ph/app/taily-smart-pet-care/id6767614669"
       },
       "technologies": [

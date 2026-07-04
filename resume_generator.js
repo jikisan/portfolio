@@ -2,21 +2,24 @@ class ResumeGenerator {
   constructor() {
     this.config = null;
     this.experienceData = null;
+    this.projectsData = null;
   }
 
   async loadData() {
     try {
-      const [configResponse, experienceResponse] = await Promise.all([
+      const [configResponse, experienceResponse, projectsResponse] = await Promise.all([
         fetch('./data/portfolio_config.json'),
-        fetch('./data/experience_data.json')
+        fetch('./data/experience_data.json'),
+        fetch('./data/projects_data.json')
       ]);
 
-      if (!configResponse.ok || !experienceResponse.ok) {
+      if (!configResponse.ok || !experienceResponse.ok || !projectsResponse.ok) {
         throw new Error('Failed to fetch configuration files');
       }
 
       this.config = await configResponse.json();
       this.experienceData = await experienceResponse.json();
+      this.projectsData = await projectsResponse.json();
     } catch (error) {
       console.error('Error loading data:', error);
       throw error;
@@ -26,7 +29,7 @@ class ResumeGenerator {
   async generatePDF() {
     try {
       // Load data if not already loaded
-      if (!this.config || !this.experienceData) {
+      if (!this.config || !this.experienceData || !this.projectsData) {
         await this.loadData();
       }
 
@@ -206,6 +209,91 @@ class ResumeGenerator {
         10
       );
       yPosition += skillsHeight + 8;
+
+      // PROJECTS Section (featured only)
+      const featuredProjects = (this.projectsData.projects || []).filter(p => p.highlighted);
+      if (featuredProjects.length > 0) {
+        yPosition += 2;
+        checkPageBreak(20);
+        doc.setFontSize(12);
+        doc.setFont('helvetica', 'bold');
+        doc.text('PROJECTS', margin, yPosition);
+        yPosition += 1;
+        doc.line(margin, yPosition, pageWidth - margin, yPosition);
+        yPosition += 6;
+
+        for (const proj of featuredProjects) {
+          checkPageBreak(20);
+
+          // Title + platform
+          doc.setFontSize(11);
+          doc.setFont('helvetica', 'bold');
+          doc.text(proj.title, margin, yPosition);
+          if (Array.isArray(proj.type) && proj.type.length > 0) {
+            doc.setFontSize(10);
+            doc.setFont('helvetica', 'italic');
+            doc.text(proj.type.join(' / '), pageWidth - margin, yPosition, { align: 'right' });
+          }
+          yPosition += 5;
+
+          // Description
+          doc.setFontSize(10);
+          doc.setFont('helvetica', 'normal');
+          const description = (proj.description || '').replace(/\s+/g, ' ').toLowerCase();
+          const descFormatted = description.charAt(0).toUpperCase() + description.slice(1);
+          const descHeight = addWrappedText(
+            descFormatted,
+            margin + 2,
+            yPosition,
+            pageWidth - 2 * margin - 2,
+            10
+          );
+          yPosition += descHeight + 2;
+
+          // Technologies as pill badges
+          if (Array.isArray(proj.technologies) && proj.technologies.length > 0) {
+            const pillFontSize = 8;
+            const padX = 2.2;
+            const padY = 1.4;
+            const pillH = 4.6;
+            const gapX = 1.8;
+            const gapY = 1.6;
+            const startX = margin + 2;
+            const maxX = pageWidth - margin;
+            let cx = startX;
+
+            doc.setFontSize(pillFontSize);
+            doc.setFont('helvetica', 'normal');
+
+            for (const tech of proj.technologies) {
+              const textW = doc.getTextWidth(tech);
+              const pillW = textW + padX * 2;
+
+              if (cx + pillW > maxX) {
+                cx = startX;
+                yPosition += pillH + gapY;
+                checkPageBreak(pillH + 2);
+              }
+
+              doc.setFillColor(240, 240, 240);
+              doc.setDrawColor(200, 200, 200);
+              doc.setLineWidth(0.2);
+              doc.roundedRect(cx, yPosition, pillW, pillH, 1.2, 1.2, 'FD');
+
+              doc.setTextColor(60, 60, 60);
+              doc.text(tech, cx + padX, yPosition + pillH - padY);
+
+              cx += pillW + gapX;
+            }
+
+            doc.setTextColor(0, 0, 0);
+            yPosition += pillH + 4;
+          } else {
+            yPosition += 2;
+          }
+        }
+        yPosition += 2;
+      }
 
       // CERTIFICATES Section
       yPosition += 2; // Add gap before section
