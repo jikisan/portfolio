@@ -266,7 +266,7 @@ class PortfolioApp {
 
       // Collect unique tabs from all project types
       const allTypes = new Set();
-      this.projects.projects.forEach(p => (p.type || []).forEach(t => allTypes.add(t)));
+      this.projects.projects.filter(p => p.image).forEach(p => (p.type || []).forEach(t => allTypes.add(t)));
       const tabs = ['All', 'Featured', ...Array.from(allTypes).sort()];
 
       // Build tab bar
@@ -279,11 +279,12 @@ class PortfolioApp {
 
       // Render all project cards
       const renderProjectCards = (filter) => {
+        const withImage = this.projects.projects.filter(p => p.image);
         const filtered = filter === 'All'
-          ? this.projects.projects
+          ? withImage
           : filter === 'Featured'
-            ? this.projects.projects.filter(p => p.highlighted)
-            : this.projects.projects.filter(p => (p.type || []).includes(filter));
+            ? withImage.filter(p => p.highlighted)
+            : withImage.filter(p => (p.type || []).includes(filter));
         projectsRow.innerHTML = filtered.map(project => `
           <article class="col-6 col-12-xsmall work-item">
             <a href="${project.image}" class="image fit thumb" data-lightbox="work-item"

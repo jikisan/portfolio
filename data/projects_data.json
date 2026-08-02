@@ -1,6 +1,34 @@
 {
   "projects": [
     {
+      "id": "flohmarkt",
+      "title": "Flohmarkt",
+      "description": "A CROSS-PLATFORM FLEA-MARKET & EVENT DISCOVERY PLATFORM FOR WEB AND NATIVE MOBILE, WITH MAP-BASED SEARCH, ORGANIZER EVENT MANAGEMENT, SELLER PROFILES, ROLE-BASED ADMIN DASHBOARDS, AND FULL EN/DE LOCALIZATION.",
+      "image": "",
+      "lightboxTitle": "Flohmarkt - CROSS-PLATFORM FLEA-MARKET & EVENT PLATFORM",
+      "type": ["Web", "Android", "iOS"],
+      "highlighted": true,
+      "link": "",
+      "technologies": [
+        "TypeScript Monorepo (shared package)",
+        "React",
+        "React Native",
+        "Expo Router",
+        "Vite",
+        "Tailwind CSS",
+        "NativeWind",
+        "TanStack Query",
+        "React Hook Form + Zod",
+        "Zustand",
+        "Leaflet / react-native-maps",
+        "i18next (EN/DE)",
+        "JWT Auth (access + refresh)",
+        "Reanimated / Framer Motion",
+        "Vitest + Jest / Testing Library",
+        "Role-Based Access Control"
+      ]
+    },
+    {
       "id": "taily",
       "title": "Taily",
       "description": "A COMPLETE PET CARE MANAGEMENT APP FOR ANDROID AND iOS WITH HEALTH TRACKING, AI DOCUMENT SCANNING, AND CO-PARENTING VIA QR CODES.",

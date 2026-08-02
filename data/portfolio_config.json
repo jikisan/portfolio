@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "June Kyle Santerna",
-    "title": "Software Developer",
+    "title": "Full Stack Software Developer",
     "avatar": "images/formal_id.png",
     "location": "Cebu City, Cebu, Philippines, 6000",
     "email": "santernakyle@gmail.com",
@@ -12,7 +12,7 @@
     }
   },
   "about": {
-    "description": "I am a dedicated Software developer with hands-on experience crafting intuitive and robust applications and programs. With a passion for innovation and a keen eye for detail, I thrive on transforming ideas into impactful digital solutions.\n\nMy journey in Software development has equipped me with a deep understanding of software technologies, allowing me to stay at the forefront of industry trends and deliver exceptional user experiences. Committed to continuous learning and growth, I am eager to take on new challenges and contribute to projects that push the boundaries of software development."
+    "description": "I am a dedicated Full Stack Software Developer with hands-on experience crafting intuitive and robust applications and programs. With a passion for innovation and a keen eye for detail, I thrive on transforming ideas into impactful digital solutions."
   },
   "skills": [
     { "name": "Java", "icon": "fab fa-java", "class": "java" },

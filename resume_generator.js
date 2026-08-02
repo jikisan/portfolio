@@ -199,16 +199,33 @@ class ResumeGenerator {
       yPosition += 5;
 
       doc.setFontSize(10);
-      doc.setFont('helvetica', 'normal');
-      const skillsText = '• Mobile development using Java, Kotlin, Swift, Jetpack Compose, Kotlin and Compost multiplatform, MVVM and Clean architecture, Automation development utilizing Selenium and Java, Web development technologies including HTML, CSS, JavaScript, Work management tools such as Jira, Trello';
-      const skillsHeight = addWrappedText(
-        skillsText,
-        margin + 2,
-        yPosition,
-        pageWidth - 2 * margin - 2,
-        10
-      );
-      yPosition += skillsHeight + 8;
+      const skillCategories = [
+        { label: 'Mobile', items: 'Java, Kotlin, Swift, React Native, Jetpack Compose, SwiftUI, Kotlin & Compose Multiplatform' },
+        { label: 'Architecture', items: 'MVVM, Clean Architecture, Dependency Injection' },
+        { label: 'Web', items: 'HTML, CSS, JavaScript, React' },
+        { label: 'Backend & Cloud', items: 'Firebase, Supabase, REST APIs' },
+        { label: 'Testing & Automation', items: 'Selenium, JUnit, n8n, GHL' },
+        { label: 'Tools', items: 'Xcode, Android Studio, Git & GitHub, Claude Code' },
+        { label: 'Project Management', items: 'Jira, Trello, Agile / Scrum' },
+        { label: 'Publishing', items: 'App Store, Play Store deployment & Web Hosting' }
+      ];
+      for (const cat of skillCategories) {
+        checkPageBreak(8);
+        doc.setFont('helvetica', 'bold');
+        const labelText = cat.label + ': ';
+        doc.text(labelText, margin + 2, yPosition);
+        const labelWidth = doc.getTextWidth(labelText);
+        doc.setFont('helvetica', 'normal');
+        const catHeight = addWrappedText(
+          cat.items,
+          margin + 2 + labelWidth,
+          yPosition,
+          pageWidth - 2 * margin - 2 - labelWidth,
+          10
+        );
+        yPosition += catHeight + 2;
+      }
+      yPosition += 6;
 
       // PROJECTS Section (featured only)
       const featuredProjects = (this.projectsData.projects || []).filter(p => p.highlighted);
