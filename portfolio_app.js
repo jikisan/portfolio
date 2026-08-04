@@ -223,6 +223,7 @@ class PortfolioApp {
     const parts = [];
     if (link.android) parts.push(storeBtn(link.android, 'android', 'fab fa-google-play', 'GET IT ON', 'Google Play'));
     if (link.ios) parts.push(storeBtn(link.ios, 'ios', 'fab fa-app-store-ios', 'Download on the', 'App Store'));
+    if (link.web) parts.push(storeBtn(link.web, 'web', 'fas fa-globe', 'Visit', 'Website'));
     if (!parts.length) return '';
     return `<div class="project-links">${parts.join('')}</div>`;
   }
