@@ -201,6 +201,30 @@ class PortfolioApp {
     }
   }
 
+  renderProjectTechnologies(technologies) {
+    if (!technologies) return '';
+
+    if (Array.isArray(technologies)) {
+      return `<ul>${technologies.map(tech => `<li>${tech}</li>`).join('')}</ul>`;
+    }
+
+    const groups = [
+      ['frontend', 'Frontend'],
+      ['backend', 'Backend'],
+      ['other', 'Other']
+    ];
+
+    return groups
+      .filter(([key]) => Array.isArray(technologies[key]) && technologies[key].length > 0)
+      .map(([key, label]) => `
+        <p class="tech-group-label">${label}</p>
+        <ul>
+          ${technologies[key].map(tech => `<li>${tech}</li>`).join('')}
+        </ul>
+      `)
+      .join('');
+  }
+
   renderProjectLinks(link) {
     if (!link) return '';
 
@@ -297,9 +321,7 @@ class PortfolioApp {
             ${this.renderProjectLinks(project.link)}
             <br>
             <h3>Tech used:</h3>
-            <ul>
-              ${project.technologies.map(tech => `<li>${tech}</li>`).join('')}
-            </ul>
+            ${this.renderProjectTechnologies(project.technologies)}
           </article>
         `).join('');
       };

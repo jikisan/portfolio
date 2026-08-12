@@ -267,8 +267,18 @@ class ResumeGenerator {
           );
           yPosition += descHeight + 2;
 
-          // Technologies as pill badges
-          if (Array.isArray(proj.technologies) && proj.technologies.length > 0) {
+          // Technologies as pill badges, grouped under Frontend/Backend/Other labels
+          const techGroups = Array.isArray(proj.technologies)
+            ? [[null, proj.technologies]]
+            : proj.technologies
+              ? [
+                  ['Frontend', proj.technologies.frontend],
+                  ['Backend', proj.technologies.backend],
+                  ['Other', proj.technologies.other]
+                ].filter(([, list]) => Array.isArray(list) && list.length > 0)
+              : [];
+
+          if (techGroups.length > 0) {
             const pillFontSize = 8;
             const padX = 2.2;
             const padY = 1.4;
@@ -277,34 +287,48 @@ class ResumeGenerator {
             const gapY = 1.6;
             const startX = margin + 2;
             const maxX = pageWidth - margin;
-            let cx = startX;
 
-            doc.setFontSize(pillFontSize);
-            doc.setFont('helvetica', 'normal');
-
-            for (const tech of proj.technologies) {
-              const textW = doc.getTextWidth(tech);
-              const pillW = textW + padX * 2;
-
-              if (cx + pillW > maxX) {
-                cx = startX;
-                yPosition += pillH + gapY;
-                checkPageBreak(pillH + 2);
+            for (const [label, techs] of techGroups) {
+              if (label) {
+                checkPageBreak(pillH + 4);
+                doc.setFontSize(7.5);
+                doc.setFont('helvetica', 'bold');
+                doc.setTextColor(120, 120, 120);
+                doc.text(label.toUpperCase(), startX, yPosition);
+                doc.setTextColor(0, 0, 0);
+                yPosition += 3.4;
               }
 
-              doc.setFillColor(240, 240, 240);
-              doc.setDrawColor(200, 200, 200);
-              doc.setLineWidth(0.2);
-              doc.roundedRect(cx, yPosition, pillW, pillH, 1.2, 1.2, 'FD');
+              let cx = startX;
+              doc.setFontSize(pillFontSize);
+              doc.setFont('helvetica', 'normal');
 
-              doc.setTextColor(60, 60, 60);
-              doc.text(tech, cx + padX, yPosition + pillH - padY);
+              for (const tech of techs) {
+                const textW = doc.getTextWidth(tech);
+                const pillW = textW + padX * 2;
 
-              cx += pillW + gapX;
+                if (cx + pillW > maxX) {
+                  cx = startX;
+                  yPosition += pillH + gapY;
+                  checkPageBreak(pillH + 2);
+                }
+
+                doc.setFillColor(240, 240, 240);
+                doc.setDrawColor(200, 200, 200);
+                doc.setLineWidth(0.2);
+                doc.roundedRect(cx, yPosition, pillW, pillH, 1.2, 1.2, 'FD');
+
+                doc.setTextColor(60, 60, 60);
+                doc.text(tech, cx + padX, yPosition + pillH - padY);
+
+                cx += pillW + gapX;
+              }
+
+              doc.setTextColor(0, 0, 0);
+              yPosition += pillH + gapY;
             }
 
-            doc.setTextColor(0, 0, 0);
-            yPosition += pillH + 4;
+            yPosition += 2;
           } else {
             yPosition += 2;
           }

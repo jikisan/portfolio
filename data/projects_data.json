@@ -9,24 +9,30 @@
       "type": ["Web", "Android", "iOS"],
       "highlighted": true,
       "link": {"web": "https://flohmarkt.guru/"},
-      "technologies": [
-        "TypeScript Monorepo (shared package)",
-        "React",
-        "React Native",
-        "Expo Router",
-        "Vite",
-        "Tailwind CSS",
-        "NativeWind",
-        "TanStack Query",
-        "React Hook Form + Zod",
-        "Zustand",
-        "Leaflet / react-native-maps",
-        "i18next (EN/DE)",
-        "JWT Auth (access + refresh)",
-        "Reanimated / Framer Motion",
-        "Vitest + Jest / Testing Library",
-        "Role-Based Access Control"
-      ]
+      "technologies": {
+        "frontend": [
+          "React",
+          "React Native",
+          "Expo Router",
+          "Vite",
+          "Tailwind CSS",
+          "NativeWind",
+          "TanStack Query",
+          "React Hook Form + Zod",
+          "Zustand",
+          "Leaflet / react-native-maps",
+          "i18next (EN/DE)",
+          "Reanimated / Framer Motion"
+        ],
+        "backend": [
+          "JWT Auth (access + refresh)",
+          "Role-Based Access Control"
+        ],
+        "other": [
+          "TypeScript Monorepo (shared package)",
+          "Vitest + Jest / Testing Library"
+        ]
+      }
     },
     {
       "id": "memberzone",
@@ -37,21 +43,27 @@
       "type": ["Android", "iOS"],
       "highlighted": true,
       "link": "",
-      "technologies": [
-        "TypeScript",
-        "React Native",
-        "Expo SDK 51",
-        "React Navigation v6",
-        "Redux Toolkit",
-        "TanStack Query",
-        "Axios",
-        "i18next",
-        "lucide-react-native",
-        "React Native SVG (QR codes)",
-        "Bearer Token + API Key Auth",
-        "Custom Expo Config Plugins",
-        "Jest"
-      ]
+      "technologies": {
+        "frontend": [
+          "React Native",
+          "Expo SDK 51",
+          "React Navigation v6",
+          "Redux Toolkit",
+          "TanStack Query",
+          "Axios",
+          "i18next",
+          "lucide-react-native",
+          "React Native SVG (QR codes)"
+        ],
+        "backend": [
+          "Bearer Token + API Key Auth"
+        ],
+        "other": [
+          "TypeScript",
+          "Custom Expo Config Plugins",
+          "Jest"
+        ]
+      }
     },
     {
       "id": "taily",
@@ -65,21 +77,28 @@
         "android": "https://play.google.com/store/apps/details?id=org.jikisan.taily",
         "ios": "https://apps.apple.com/ph/app/taily-smart-pet-care/id6767614669"
       },
-      "technologies": [
-        "Kotlin Multiplatform",
-        "Supabase (Auth, Database, Storage)",
-        "Supabase RLS Policies",
-        "Koin (Dependency Injection)",
-        "Ktor Client",
-        "CameraX",
-        "AI Document Extraction",
-        "Google Firebase (Push Notifications)",
-        "MVVM Architecture",
-        "Repository Pattern",
-        "Coroutines",
-        "Expect/Actual Pattern",
-        "Deep Linking"
-      ]
+      "technologies": {
+        "frontend": [
+          "CameraX",
+          "Deep Linking",
+          "Jetpack Compose"
+        ],
+        "backend": [
+          "Supabase (Auth, Database, Storage)",
+          "Supabase RLS Policies",
+          "Ktor Client",
+          "Google Firebase (Push Notifications)",
+          "AI Document Extraction"
+        ],
+        "other": [
+          "Kotlin Multiplatform",
+          "Koin (Dependency Injection)",
+          "MVVM Architecture",
+          "Repository Pattern",
+          "Coroutines",
+          "Expect/Actual Pattern"
+        ]
+      }
     },
     {
       "id": "compose-multiplatform-ecommerce",
@@ -90,23 +109,29 @@
       "type": ["Android", "iOS"],
       "highlighted": false,
       "link": "",
-      "technologies": [
-        "Compose Multiplatform",
-        "Jetpack Compose",
-        "Kotlin Multiplatform",
-        "Kotlin Flow",
-        "StateFlow",
-        "Coroutines",
-        "MVVM Architecture",
-        "Clean Architecture Principles",
-        "Sealed Classes",
-        "Repository Pattern",
-        "Ktor Client",
-        "Material Design 3",
-        "Navigation Component (for Compose)",
-        "Gradle Kotlin DSL",
-        "Kotlinx Serialization"
-      ]
+      "technologies": {
+        "frontend": [
+          "Compose Multiplatform",
+          "Jetpack Compose",
+          "Material Design 3",
+          "Navigation Component (for Compose)"
+        ],
+        "backend": [
+          "Ktor Client"
+        ],
+        "other": [
+          "Kotlin Multiplatform",
+          "Kotlin Flow",
+          "StateFlow",
+          "Coroutines",
+          "MVVM Architecture",
+          "Clean Architecture Principles",
+          "Sealed Classes",
+          "Repository Pattern",
+          "Gradle Kotlin DSL",
+          "Kotlinx Serialization"
+        ]
+      }
     },
     {
       "id": "vstech",
@@ -117,13 +142,19 @@
       "type": ["Windows"],
       "highlighted": false,
       "link": "",
-      "technologies": [
-        "Java",
-        "SQLite",
-        "JDBC",
-        "JavaFX",
-        "Apache POI"
-      ]
+      "technologies": {
+        "frontend": [
+          "JavaFX"
+        ],
+        "backend": [
+          "SQLite",
+          "JDBC"
+        ],
+        "other": [
+          "Java",
+          "Apache POI"
+        ]
+      }
     },
     {
       "id": "ph-heroes",
@@ -134,18 +165,24 @@
       "type": ["Android"],
       "highlighted": false,
       "link": "",
-      "technologies": [
-        "Kotlin",
-        "Jetpack Compose",
-        "Dependency injection with Dagger-Hilt",
-        "Clean Architecture",
-        "MVVM",
-        "Utilize ROOM as local database",
-        "Fetch API using retrofit",
-        "Palette API",
-        "Develop a backend server with KTOR",
-        "Dependency injection with Koin"
-      ]
+      "technologies": {
+        "frontend": [
+          "Jetpack Compose",
+          "Palette API"
+        ],
+        "backend": [
+          "Fetch API using retrofit",
+          "Develop a backend server with KTOR",
+          "Utilize ROOM as local database"
+        ],
+        "other": [
+          "Kotlin",
+          "Dependency injection with Dagger-Hilt",
+          "Clean Architecture",
+          "MVVM",
+          "Dependency injection with Koin"
+        ]
+      }
     },
     {
       "id": "busyan",
@@ -156,14 +193,18 @@
       "type": ["Android"],
       "highlighted": false,
       "link": "",
-      "technologies": [
-        "Java",
-        "Firebase (Auth & Database)",
-        "Google Places API",
-        "Google Maps API",
-        "REST API",
-        "Retrofit"
-      ]
+      "technologies": {
+        "backend": [
+          "Firebase (Auth & Database)",
+          "Google Places API",
+          "Google Maps API",
+          "REST API",
+          "Retrofit"
+        ],
+        "other": [
+          "Java"
+        ]
+      }
     },
     {
       "id": "fish2locals",
@@ -174,13 +215,17 @@
       "type": ["Android"],
       "highlighted": false,
       "link": "",
-      "technologies": [
-        "Java",
-        "Firebase (Auth & Database)",
-        "Google Places API",
-        "Google Maps API",
-        "Geocoding"
-      ]
+      "technologies": {
+        "backend": [
+          "Firebase (Auth & Database)",
+          "Google Places API",
+          "Google Maps API",
+          "Geocoding"
+        ],
+        "other": [
+          "Java"
+        ]
+      }
     },
     {
       "id": "servicehub",
@@ -191,12 +236,16 @@
       "type": ["Android"],
       "highlighted": false,
       "link": "",
-      "technologies": [
-        "Java",
-        "Firebase (Auth & Database)",
-        "Google Places API",
-        "Google Maps API"
-      ]
+      "technologies": {
+        "backend": [
+          "Firebase (Auth & Database)",
+          "Google Places API",
+          "Google Maps API"
+        ],
+        "other": [
+          "Java"
+        ]
+      }
     },
     {
       "id": "revic",
@@ -207,12 +256,16 @@
       "type": ["Android"],
       "highlighted": false,
       "link": "",
-      "technologies": [
-        "Java",
-        "Firebase (Auth & Database)",
-        "Google Places API",
-        "Google Maps API"
-      ]
+      "technologies": {
+        "backend": [
+          "Firebase (Auth & Database)",
+          "Google Places API",
+          "Google Maps API"
+        ],
+        "other": [
+          "Java"
+        ]
+      }
     },
     {
       "id": "jaja",
@@ -223,11 +276,17 @@
       "type": ["Android"],
       "highlighted": false,
       "link": "",
-      "technologies": [
-        "Java",
-        "Firebase (Auth & Database)",
-        "RecordView API"
-      ]
+      "technologies": {
+        "frontend": [
+          "RecordView API"
+        ],
+        "backend": [
+          "Firebase (Auth & Database)"
+        ],
+        "other": [
+          "Java"
+        ]
+      }
     }
   ],
   "githubUrl": "https://github.com/jikisan"
