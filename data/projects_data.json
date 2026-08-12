@@ -25,6 +25,7 @@
           "Reanimated / Framer Motion"
         ],
         "backend": [
+          "FastAPI",
           "JWT Auth (access + refresh)",
           "Role-Based Access Control"
         ],
