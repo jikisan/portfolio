@@ -240,7 +240,7 @@ class ResumeGenerator {
         yPosition += 6;
 
         for (const proj of featuredProjects) {
-          checkPageBreak(20);
+          checkPageBreak(28);
 
           // Title + platform
           doc.setFontSize(11);
@@ -251,7 +251,7 @@ class ResumeGenerator {
             doc.setFont('helvetica', 'italic');
             doc.text(proj.type.join(' / '), pageWidth - margin, yPosition, { align: 'right' });
           }
-          yPosition += 5;
+          yPosition += 6;
 
           // Description
           doc.setFontSize(10);
@@ -265,9 +265,9 @@ class ResumeGenerator {
             pageWidth - 2 * margin - 2,
             10
           );
-          yPosition += descHeight + 2;
+          yPosition += descHeight + 5;
 
-          // Technologies as pill badges, grouped under Frontend/Backend/Other labels
+          // Technologies as Skills-style "Label: comma, separated, items" lines
           const techGroups = Array.isArray(proj.technologies)
             ? [[null, proj.technologies]]
             : proj.technologies
@@ -279,59 +279,30 @@ class ResumeGenerator {
               : [];
 
           if (techGroups.length > 0) {
-            const pillFontSize = 8;
-            const padX = 2.2;
-            const padY = 1.4;
-            const pillH = 4.6;
-            const gapX = 1.8;
-            const gapY = 1.6;
-            const startX = margin + 2;
-            const maxX = pageWidth - margin;
-
+            doc.setFontSize(10);
             for (const [label, techs] of techGroups) {
+              checkPageBreak(8);
+              const labelText = label ? label + ': ' : '';
+              let labelWidth = 0;
               if (label) {
-                checkPageBreak(pillH + 4);
-                doc.setFontSize(7.5);
                 doc.setFont('helvetica', 'bold');
-                doc.setTextColor(120, 120, 120);
-                doc.text(label.toUpperCase(), startX, yPosition);
-                doc.setTextColor(0, 0, 0);
-                yPosition += 3.4;
+                doc.text(labelText, margin + 2, yPosition);
+                labelWidth = doc.getTextWidth(labelText);
               }
-
-              let cx = startX;
-              doc.setFontSize(pillFontSize);
               doc.setFont('helvetica', 'normal');
-
-              for (const tech of techs) {
-                const textW = doc.getTextWidth(tech);
-                const pillW = textW + padX * 2;
-
-                if (cx + pillW > maxX) {
-                  cx = startX;
-                  yPosition += pillH + gapY;
-                  checkPageBreak(pillH + 2);
-                }
-
-                doc.setFillColor(240, 240, 240);
-                doc.setDrawColor(200, 200, 200);
-                doc.setLineWidth(0.2);
-                doc.roundedRect(cx, yPosition, pillW, pillH, 1.2, 1.2, 'FD');
-
-                doc.setTextColor(60, 60, 60);
-                doc.text(tech, cx + padX, yPosition + pillH - padY);
-
-                cx += pillW + gapX;
-              }
-
-              doc.setTextColor(0, 0, 0);
-              yPosition += pillH + gapY;
+              const groupHeight = addWrappedText(
+                techs.join(', '),
+                margin + 2 + labelWidth,
+                yPosition,
+                pageWidth - 2 * margin - 2 - labelWidth,
+                10
+              );
+              yPosition += groupHeight + 2.5;
             }
-
-            yPosition += 2;
           } else {
             yPosition += 2;
           }
+          yPosition += 8;
         }
         yPosition += 2;
       }
