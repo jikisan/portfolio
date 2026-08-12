@@ -201,6 +201,18 @@ class PortfolioApp {
     }
   }
 
+  renderProjectTypeIcons(type) {
+    const iconMap = {
+      Web: { icon: 'fa-solid fa-globe', color: '#49bf9d' },
+      Android: { icon: 'fa-brands fa-android', color: '#3ddc84' },
+      iOS: { icon: 'fa-brands fa-apple', color: '#a6a6a6' },
+      Windows: { icon: 'fa-brands fa-windows', color: '#00a4ef' }
+    };
+    return (type || [])
+      .map(t => iconMap[t] ? `<i class="${iconMap[t].icon} project-type-icon" style="color: ${iconMap[t].color}" title="${t}"></i>` : '')
+      .join('');
+  }
+
   renderProjectTechnologies(technologies) {
     if (!technologies) return '';
 
@@ -317,6 +329,7 @@ class PortfolioApp {
               <img src="${project.image}" alt="${project.title}" />
             </a>
             <h3>${project.title}</h3>
+            <div class="project-type-icons">${this.renderProjectTypeIcons(project.type)}</div>
             <p>${project.description}</p>
             ${this.renderProjectLinks(project.link)}
             <br>

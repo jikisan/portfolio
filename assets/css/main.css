@@ -3555,5 +3555,13 @@ body.is-touch .poptrox-popup .closer {
   color: #fff;
 }
 
+.project-type-icons {
+  margin-bottom: 0.75em;
+}
+
+.project-type-icon {
+  font-size: 1.1em;
+  margin-right: 0.5em;
+}
 
 
